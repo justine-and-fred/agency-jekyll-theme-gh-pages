@@ -2,6 +2,7 @@
 // Check for empty fields
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
+   empty($_POST['numero_compte']) 		||
    empty($_POST['message'])	||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
@@ -11,6 +12,7 @@ if(empty($_POST['name'])  		||
 
 $name = $_POST['name'];
 $email_address = $_POST['email'];
+$numero_compte= $_POST['numero_compte'];
 $message = $_POST['message'];
 
 // Create the email and send the message
