@@ -1,5 +1,5 @@
-url: /Users/fred/GitHubustine-and-fred.github.io
-baseurl: /Users/fred/GitHubustine-and-fred.github.io
+url: /Users/fred/GitHub
+baseurl: /Justine-and-fred.github.io
 
 # Site settings
 title: Mariage de Justine et Fred
@@ -14,26 +14,26 @@ color:
 
 # Team names, titles and social links
 people:
-- name: Kay Garland
+- name: Administration communale de Hamoir
   pic: 1
-  position: Lead Designer
+  position: rue de Tohogne 14 4180 Hamoir
   social:
-    - title: twitter
+    - title: #
       url: #
-    - title: facebook
+    - title: #
       url: #
-    - title: stack-overflow
+    - title: #
       url: #
 
-- name: Larry Parker
+- name: Hostellerie du Saint Roch
   pic: 2
-  position: Lead Marketer
+  position: Rue du Parc - Vallee De L'Ourthe, 4180 Comblain-au-Pont
   social:
-    - title: twitter
+    - title: #
       url: #
-    - title: facebook
+    - title: #
       url: #
-    - title: linkedin
+    - title: #
       url: #
 
 
