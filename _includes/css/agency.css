@@ -346,6 +346,8 @@ section h3.section-subheading {
     }
 }
 
+
+
 .service-heading {
     margin: 15px 0;
     text-transform: none;
@@ -830,6 +832,11 @@ ul.social-buttons li a:active {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+.centeredImage
+    {
+    text-align:center;
+    display:block;
+    }
 
 .portfolio-modal .close-modal .lr .rl {
     z-index: 1052;

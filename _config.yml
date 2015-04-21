@@ -1,5 +1,5 @@
-url: /justine-and-fred.github.io/
-baseurl: /justine-and-fred.github.io
+url: /Users/fred/GitHubustine-and-fred.github.io
+baseurl: /Users/fred/GitHubustine-and-fred.github.io
 
 # Site settings
 title: Mariage de Justine et Fred
@@ -8,8 +8,8 @@ description: "Nous nous marions !"
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: fed100
-  secondary: fec503  
+  primary: ec382f
+  secondary: ec382f  
   secondary-dark: 333
 
 # Team names, titles and social links
