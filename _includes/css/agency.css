@@ -340,6 +340,26 @@ section h3.section-subheading {
     font-weight: 400;
 }
 
+
+section h5.section-subheading {
+    margin-bottom: 50px;
+    text-transform: none;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-weight: 575;
+    text-align: justify;
+}
+
+
+section h6.section-subheading {
+    margin-bottom: 50px;
+    text-transform: none;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 575;
+    text-align: justify;
+}
+
 @media(min-width:768px) {
     section {
         padding: 150px 0;
@@ -397,7 +417,7 @@ section h3.section-subheading {
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hovh5er-content h4 {
     margin: 0;
 }
 
