@@ -1,0 +1,484 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* force scroll bars */
+html {
+  height: 100%;
+  margin-bottom: 0.01em;
+}
+body {
+  background-color: #CCCCCC;
+  color: #333333;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 75%;
+}
+img {
+  border: none;
+}
+/* ================================= layout ========================================= */
+#wrapper {
+	width: 660px;
+	margin: 10px auto 0 auto;
+	color: #333333;
+	background: #FFFFFF url(../img/contentbg.gif) repeat-y;
+}
+#header {
+  color: #333333;
+  background: #EAEAEA url(../img/headerbg.gif) no-repeat;
+  height: 46px;
+}
+#login #header {
+  background-image: url(../img/headerloginbg.gif);
+}
+#content {
+	margin-left: 20px;
+  padding: 4px 0 0 20px;
+	width: 598px;
+  border: 1px solid;
+  border-color: #666666 #CCCCCC #EEEEEE #CCCCCC;
+  float: left;
+  display: inline;
+  min-height: 395px;
+  color: #333333;
+  background-color: #FFFFFF;
+}
+.clearboth { /* see http://www.pixelsurge.com/experiment/clearers.htm */
+	clear: both;
+	height: 0;
+	margin: 0;
+	font-size: 1px;
+	line-height: 0;
+}
+/* ================================= typography ====================================== */
+h1 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 0 0 1em 0;
+}
+h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 15px 0 0 0;
+  color: #666666;
+  width: 554px;
+  overflow: hidden;
+}
+h3 {
+  color: #666666;
+  font-size: 1.3em;
+  margin: 0 0 0.5em 0;
+}
+p, ol li, ul li {
+  font-size: 1.2em;
+}
+p {
+  margin: 0 0 1em 0;
+}
+ol {
+  margin-left: 20px;
+}
+ol.messages {
+  margin-left: 0;
+}
+ol li.warning {
+  padding-top: 5px;
+  list-style-type: none;
+  color: #990000;
+  background-color: #FFFFFF;
+}
+ol li.warning a {
+  color: #990000;
+  background-color: #FFFFFF;
+}
+ol li.warning a:hover {
+  color: #990000;
+  background-color: #FFFFFF;
+}
+  
+p.error {
+  color: #990000;
+  background-color: #FFFFFF;
+  margin: 15px 0 0 0;
+}
+p.error a {
+  color: #990000;
+}
+p.error a:link, p.error a:visited {
+  color: #990000;
+}
+  
+pre {
+  font-size: 12px;
+}
+em {
+  font-style: italic;
+  color: #BB0000;
+}
+a:link, a:visited {
+  color: #69C;
+}
+a:hover {
+  color: #3c5c7c;
+}
+th {
+  color: #666666;
+}
+/* ======================================= forms ================================== */
+form, form input, form checkbox, form select {
+  font-size: 1em;
+}
+input.text, select {
+  border: 1px solid;
+  border-color: #666666 #CCCCCC #EEEEEE #CCCCCC;
+}
+input {
+  padding: 3px;
+}
+input.formbutton {
+  width: 5em;
+  height: 2em;
+}
+input.checkbox {
+  width: 20px;
+  min-height: 20px;
+}
+label {
+  cursor: pointer;
+}
+form.public {
+  /* no visual effect - used in manager.js for forms that need an exit check */
+}
+/* ================================= tables ================================ */
+table {
+  font-size: 1.2em;
+  padding-bottom: 1em;
+}
+td {
+  padding-right: 10px;
+  vertical-align: top;
+}
+caption, th {
+  font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+  padding: 1em 0 0.5em 0;
+}
+/* ============================== navigation ========================================= */
+#navigation * {
+  border: 0;
+}
+#navigation {
+  margin: 0 0 1em 30px;
+  padding: 10px 0 0 0;
+  float: left;
+  display: inline;
+}
+#navigation ul {
+  list-style: none;
+  width: 600px;
+  color: #000000;
+  background: #EEEEEE url(../img/logo.gif) right 1px no-repeat;
+  float: left;
+}
+#navigation ul li a {
+  display: block;
+  line-height: 30px;
+  text-align: left;
+  float: left; /* for IE Mac */
+}
+#navigation ul li {
+  float: left;
+  padding-left: 25px;
+}
+#navigation #navgalleries {
+  padding-left: 11px;
+}
+#edit #navedit a:link, #edit #navedit a:visited {
+  color: #3c5c7c;
+}
+#galleries #navgalleries a:link, #galleries #navgalleries a:visited {
+	color: #3c5c7c;
+}
+#admin #navadmin a:link, #admin #navadmin a:visited {
+	color: #3c5c7c;
+}
+#copy #navcopy a:link, #copy #navcopy a:visited {
+	color: #3c5c7c;
+}
+#import #navimport a:link, #import #navimport a:visited {
+	color: #3c5c7c;
+}
+/* ============================== button bar ========================================= */
+#buttonbar * {
+  border: 0;
+  font-size: 12px;
+}
+#buttonbar {
+  margin: 0 0 1em -5px;
+  padding: 10px 0 10px 0;
+  float: left;
+  display: inline;
+  font-size: 1em;
+}
+#buttonbar ul {
+  list-style: none;
+  width: 590px;
+  float: left;
+  overflow: hidden;
+}
+#buttonbar ul li a {
+  display: block;
+  width: 117px;
+  height: 22px;
+  margin-right: 6px;
+  padding-right: 18px; /* sliding doors padding */
+  line-height: 30px;
+  text-align: center;
+  text-indent: 18px;
+  float: left; /* for IE Mac */
+  display: inline; /* for IE 6 Win */
+  text-decoration: none;
+  background: transparent url(../img/bg_button_a.gif) no-repeat scroll top right;
+}
+#buttonbar ul li a span {
+  background: transparent url(../img/bg_button_span.gif) no-repeat;
+  display: block;
+  line-height: 14px;
+  padding: 4px 0 4px 0px;
+} 
+#buttonbar ul li {
+  float: left;
+  width: 135px;
+  display: inline;
+  margin-right: 10px;
+}
+#buttonbar a:active {
+    background-position: bottom right;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+}
+#buttonbar a:active span {
+    background-position: bottom left;
+}
+#images #navimages a:link, #images #navimages a:visited {
+  color: #3c5c7c;
+}
+#customize #navcustomize a:link, #customize #navcustomize a:visited {
+  color: #3c5c7c;
+}
+#upload #navupload a:link, #upload #navupload a:visited {
+  color: #3c5c7c;
+}
+#admin #navadmin a:link, #admin #navadmin a:visited {
+  color: #3c5c7c;
+}
+/* ============================== footer ============================================= */
+#footer {
+  width: 660px;
+  color: #666666;
+  background: #EAEAEA url(../img/footerbg.gif) no-repeat;
+  height: 46px;
+  clear: both;
+}
+#footer p {
+  font-size: .8em;
+  margin: 0 0 0 41px;
+  padding: 1em 0 0 0; 
+}
+/* ============================== login screen ======================================= */
+#login #welcome {
+  float: left;
+  display: inline;
+  width: 250px;
+}
+#login #loginform {
+  float: right;
+  display: inline;
+  width: 290px;
+}
+#login #footer p {
+  margin: 0 0 0 77px;
+}
+#login h1 {
+  margin-left: 35px;
+  margin-bottom: 0;
+  padding-top: 100px;
+}
+#login #welcome a:link, #login #welcome a:visited {
+  color: #6699CC;
+  background-color: #FFFFFF;
+}
+#login #welcome a:hover {
+  color: #3c5c7c;
+  background-color: #FFFFFF;
+}
+#login #welcome p {
+  margin-left: 35px;
+  font-size: 1.3em;
+  color: #6699CC;
+  background-color: #FFFFFF;
+}
+#login p.error {
+  font-weight: bold;
+  color: #990000;
+  background-color: #FFFFFF;
+  padding-top: 73px;
+}
+/* ============================== galleries screen =================================== */
+#galleries h2 a:link, #galleries h2 a:visited {
+  color: #6699CC;
+  background-color: #FFFFFF; 
+}
+#galleries h2 a:hover {
+  color: #3c5c7c;
+  background-color: #FFFFFF;
+}
+#galleries p.message {
+  padding: 12px 0 0 0;
+  font-weight: bold;
+}
+#galleryset {
+  clear: both;
+}
+#galleryset td {
+  padding: 0 14px 10px 0;
+}
+#galleryset td.title {
+	width: 272px;
+}
+.action {
+  background-color: #FFFFFF;
+  color: #3c5c7c;
+}
+/* ============================== images screen ====================================== */
+#imagelist {
+  margin: 0;
+  padding: 0;
+}
+#imagelist td {
+  margin: 0;
+  padding: 0 0 5px 0;
+  width: 82px;
+}
+#imagelist td.ilfilename {
+  width: 164px;
+}
+#imagelist td.ilcaption {
+  width: 228px;
+}
+#imagelist input.ilinput {
+  width: 223px;
+  border: 1px solid;
+  border-color: #666666 #CCCCCC #EEEEEE #CCCCCC;
+}
+#imagelist td.ildelete, #imagelist th.ildelete {
+  padding-left: 15px;
+}
+/* ============================== upload screen ====================================== */
+#upload object {
+  margin: 0 0 0 -2px;
+  padding: 0;
+}
+#upload #applet {
+  width: 405px;
+  float: left;
+}
+#upload #applettext {
+  width: 163px;
+  padding-right: 10px;
+  float: right;
+}
+/* ============================== customize screen ================================== */
+#customize #settings2 {
+  width: 255px;
+  float: left;
+}
+#customize #settings3 {
+  width: 255px;
+  float: right;
+  display: inline;
+  margin-right: 40px;
+}
+#customize td {
+  padding: 0 0 5px 0;
+  line-height: 20px;
+  height: 30px;
+}
+#customize td.label {
+  width: 142px;
+}
+#customize select {
+  width: 112px;
+  height: 22px;
+}
+#customize #settings1 input.text {
+  color: #000000;
+  background-color: #FFFFFF !important;
+}
+#customize input.text {
+  width: 102px;
+}
+#customize #title {
+  width: 405px;
+}
+#customize #absurl {
+  width: 405px;
+  background-color: #FFFFFF !important;
+  color: #999999;
+}
+/* ============================ Import Screen =============================== */
+#import h2 {
+  padding-bottom: 1em;
+}
+#import td {
+  padding: 0 0 5px 0;
+  line-height: 20px;
+  height: 30px;
+}
+#import td.col1 {
+  width: 94px;
+}
+#import td.col2 {
+  padding-right: 2px;
+}
+#import input.text {
+  width: 475px;
+}
+#import ol {
+  width: 555px;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+/* ============================ Admin Screen ============================== */
+
+#admin #currentpass {
+  float: left;
+  display: inline;
+  width: 250px;
+}
+#admin #instructions {
+  width: 220px;
+}
+#admin #changepassform {
+  float: right;
+  display: inline;
+  width: 290px;
+}
+#admin input.text {
+  width: 218px;
+}
+#admin p.error {
+  font-weight: bold;
+  color: #990000;
+  background-color: #FFFFFF;
+  padding-top: 1em;
+}
+#admin p.version {
+  clear: both;
+  font-size: 0.8em;
+  padding-top: 75px;
+}
+  

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery
+	galleryTitle="Juicebox-Pro Gallery"
+>
+  <image imageURL="images/wide.jpeg"
+	thumbURL="thumbs/wide.jpeg"
+	linkURL="images/wide.jpeg"
+	linkTarget="_blank">
+    	<title><![CDATA[Welcome to <u><a href="http://www.juicebox.net/" target="_blank">Juicebox-Pro</a></u>.]]></title>
+  </image>
+  <image imageURL="images/tall.jpeg"
+	thumbURL="thumbs/tall.jpeg"
+	linkURL="images/tall.jpeg"
+	linkTarget="_blank">
+    <caption>This is a sample Juicebox-Pro gallery.</caption>
+  </image>
+  <image imageURL="images/wide.jpeg"
+	thumbURL="thumbs/wide.jpeg"
+	linkURL="images/wide.jpeg"
+	linkTarget="_blank">
+	<title>Pro Button-Bar</title>
+    <caption>The Pro Button Bar allows for optional AutoPlay control, Next/Back navigation, Information button and Audio Toggle.</caption>
+  </image>
+  <image imageURL="images/tall.jpeg"
+	thumbURL="thumbs/tall.jpeg"
+	linkURL="images/tall.jpeg"
+	linkTarget="_blank">
+	<title>Watermarks</title>
+    	<caption><![CDATA[JuiceboxBuilder-Pro allows you to easily add a watermark image into your gallery images.]]></caption>
+  </image>
+  <image imageURL="images/wide.jpeg"
+	thumbURL="thumbs/wide.jpeg"
+	linkURL="images/wide.jpeg"
+	linkTarget="_blank">
+	<title>Back Button</title>
+    <caption>Optional 'Back Button'. Button text and link URL are configurable..</caption>
+  </image>
+  <image imageURL="images/tall.jpeg"
+	thumbURL="thumbs/tall.jpeg"
+	linkURL="images/tall.jpeg"
+	linkTarget="_blank">
+	<title>Easy Theming</title>
+    <caption><![CDATA[Configure colors and positioning via config options or create a custom theme for more advanced theming.]]></caption>
+  </image>
+  <image imageURL="images/wide.jpeg"
+	thumbURL="thumbs/wide.jpeg"
+	linkURL="images/wide.jpeg"
+	linkTarget="_blank">
+	<title>AutoPlay</title>
+    <caption><![CDATA[AutoPlay options include looping and randomization.]]></caption>
+  </image>
+  <image imageURL="images/tall.jpeg"
+	thumbURL="thumbs/tall.jpeg"
+	linkURL="images/tall.jpeg"
+	linkTarget="_blank">
+	<title>API</title>
+    <caption><![CDATA[<u><a href="http://juicebox.net/support/api/" target="_blank">JavaScript API</a></u> allows external gallery control.]]></caption>
+  </image>
+  <image imageURL="images/wide.jpeg"
+	thumbURL="thumbs/wide.jpeg"
+	linkURL="images/wide.jpeg"
+	linkTarget="_blank">
+	<title>Unlimited Gallery Size</title>
+    <caption><![CDATA[Support for large galleries. Unlimited local images or up to 500 Flickr images.]]></caption>
+  </image>
+   <image imageURL="images/tall.jpeg"
+	thumbURL="thumbs/tall.jpeg"
+	linkURL="images/tall.jpeg"
+	linkTarget="_blank">
+	<title>No Branding</title>
+    <caption><![CDATA[Integrate Juicebox-Pro free of any branding for a full and seamless integration into your site.]]></caption>
+  </image>
+ <image imageURL="images/wide.jpeg"
+	thumbURL="thumbs/wide.jpeg"
+	linkURL="images/wide.jpeg"
+	linkTarget="_blank">
+	<title>Music</title>
+    <caption><![CDATA[Supports audio playback.]]></caption>
+  </image>
+  <image imageURL="images/tall.jpeg"
+	thumbURL="thumbs/tall.jpeg"
+	linkURL="images/tall.jpeg"
+	linkTarget="_blank">
+	<title>Pro Customization Options</title>
+    <caption><![CDATA[Take advantage of over 70 additional pro customization options]]></caption>
+  </image>
+</juiceboxgallery>

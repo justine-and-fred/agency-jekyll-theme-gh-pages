@@ -1,0 +1,35 @@
+/* hacks for IE6 Win */
+#content {
+  height: 395px;
+}
+#buttonbar ul li a {
+  width: 118px;
+  padding-right: 10px;
+  margin-right: 0;
+}
+#buttonbar ul li {
+  width: 136px;
+  margin-right: 0;
+  padding: 0;
+}
+#buttonbar ul {
+  margin-right: 0;
+  width: 600px;
+}
+/* The following is a hack for the bug in IE6 Win where select elements */
+/* are rendered on top of overlying AP elements - i.e. the color picker */
+/* Not strictly necessary with the current layout of the customize page */
+/* but retained in case the page is redesigned in future.               */
+/* See http://www.hedgerwow.com/360/bugs/css-select-free.html           */
+.selectfree iframe
+{
+	display:none;/*for IE5*/
+	display/**/:block;/*for IE5*/
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
+	filter:mask();
+	width:219px;
+	height:199px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<% local function escape_xml(str)
+	return tostring(str):gsub("&", "&amp;"):gsub("'", "&apos;"):gsub(">", "&gt;"):gsub("<", "&lt;"):gsub("\"", "&quot;")
+end
+
+local function escape_double_quotes(str)
+	return tostring(str):gsub("\"", "&quot;")
+end
+
+local function line_break(str)
+	return tostring(str):gsub("\r\n", "<br />"):gsub("\r", "<br />"):gsub("\n", "<br />"):gsub(" ", "<br />")
+end
+
+local function strip_control_characters(str)
+	local s = ""
+	for i in tostring(str):gmatch("%C+") do
+		s = s .. i
+	end
+	return s
+end
+
+local function get_rgba(hex, opacity)
+	local h = tostring(hex):gsub("#", "")
+	return "rgba(" .. tonumber(h:sub(1, 2), 16) .. "," .. tonumber(h:sub(3, 4), 16) .. "," .. tonumber(h:sub(5, 6), 16) .. "," .. tonumber(opacity, 10) / 100 .. ")"
+end
+
+local function trim(str)
+	return tostring(str):gsub("^%s*(.-)%s*$", "%1")
+end
+
+local function trim_slashes(str)
+	return tostring(str):gsub("^(.-)/*$", "%1")
+end %>
+
+<html lang="en">
+	<head>
+		<title><%= escape_xml(model.juicebox.galleryTitle) %></title>
+		<meta charset="utf-8" />
+		<meta name="description" content="<%= escape_double_quotes(model.juicebox.galleryDescription) %>" />
+		<meta name="viewport" id="jb-viewport" content="minimal-ui" />
+		<% local url = trim(trim_slashes(model.extra.shareUrl)) %>
+		<!--START OPEN GRAPH TAGS-->
+		<meta property="og:description" content="<%= escape_double_quotes(model.juicebox.galleryDescription) %>" />
+		<meta property="og:image" content="<%= url %>/images/<%= getImage(1).exportFilename %>.jpg" />
+		<meta property="og:title" content="<%= escape_double_quotes(model.juicebox.galleryTitle) %>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="<%= url %>/" />
+		<!--END OPEN GRAPH TAGS-->
+		<% if mode == "preview" then %>
+			<script type="text/javascript" src="resources/js/live_update.js"></script>
+		<% end %>
+		<style type="text/css">
+			body {
+				margin: 0px;
+				<% if mode == "preview" then %>
+					background-color: #474747;
+				<% end %>
+			}
+		</style>
+	</head>
+	<body>
+		<!--START JUICEBOX EMBED-->
+		<script src="jbcore/juicebox.js"></script>
+		<script>
+			new juicebox({
+				backgroundColor: "<%= get_rgba(model.extra.backgroundColorColor, model.extra.backgroundColorOpacity) %>",
+				containerId: "juicebox-container",
+				galleryHeight: "<%= model.extra.galleryHeight %>",
+				galleryWidth: "<%= model.extra.galleryWidth %>"
+			});
+		</script>
+		<div id="juicebox-container">
+			<% if model.extra.addSEOContent then %>
+				<noscript>
+					<h1><%= model.juicebox.galleryTitle %></h1>
+					<% for index=1, numImages do
+						local title = trim(strip_control_characters(line_break(getImage(index).metadata.title)))
+						local caption = trim(strip_control_characters(line_break(getImage(index).metadata.caption)))
+						local seo = title
+						if string.len(title) > 0 then
+							seo = seo .. " "
+						end
+						seo = seo .. caption %>
+						<p><img src="images/<%= getImage(index).exportFilename %>.jpg" title="<%= escape_double_quotes(title) %>" alt="<%= escape_double_quotes(caption) %>" /><br /><%= escape_xml(seo) %></p>
+					<% end %>
+				</noscript>
+			<% end %>
+		</div>
+		<!--END JUICEBOX EMBED-->
+	</body>
+</html>

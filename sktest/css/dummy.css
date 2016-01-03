@@ -1,0 +1,5 @@
+@import url("all.css");
+
+/* This sheet is a dummy to prevent unstyled content appearing in IE6Win */
+/* Import with quotes and brackets hides css from version 4 browsers */
+/* Final semi-colon IS needed */
